@@ -36,3 +36,6 @@ library/cache/
 
 # Ideas repository
 ideas/.processing.lock
+
+# Graphify output (lives in ~/.claude/graphify-out/)
+graphify-out/
