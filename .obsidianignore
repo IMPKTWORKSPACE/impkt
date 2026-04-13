@@ -1,27 +1,12 @@
-# Obsidian ignores these folders and files
-# They are not notes and should not appear in the vault
+# Obsidian vault ignores — ~/.claude/impkt/
+# These are not notes and should not appear in the vault graph
 
 # Git
 .git/
 
-# Claude Code
-.claude/
-
-# Graphify (tool and output)
-tools/graphify/
-graphify-out/
-system/graphify-out/
-
-# Node modules
-node_modules/
-
-# Python cache
-__pycache__/
-.venv/
-
-# Generated output
-pipeline/research/
-*.pdf
+# Obsidian config
+.obsidian/workspace.json
+.obsidian/graph.json
 
 # IDE
 .vscode/
@@ -31,17 +16,13 @@ pipeline/research/
 .DS_Store/
 Thumbs.db
 
-# Config files in root (exclude from graph but not from vault)
-*.json
-*.yaml
-*.yml
-*.py
-*.sh
-*.md
-!CLAUDE.md
-!SOUL.md
-!AGENTS.md
-!HEARTBEAT.md
-!USER.md
-!CONTEXT.md
-!MEMORY.md
+# Python cache
+__pycache__/
+.venv/
+*.pyc
+
+# Node
+node_modules/
+
+# Library cache
+library/cache/

@@ -21,7 +21,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Obsidian (vault config - workspace-specific)
+# Obsidian vault config (per vault)
 .obsidian/workspace.json
 .obsidian/graph.json
 
@@ -34,8 +34,8 @@ Thumbs.db
 # Library cache
 library/cache/
 
-# Ideas repository
-ideas/.processing.lock
-
 # Graphify output (lives in ~/.claude/graphify-out/)
 graphify-out/
+
+# Claude Code local config
+.claude/
