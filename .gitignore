@@ -1,0 +1,56 @@
+# Environment
+.env
+.env.*
+*.key
+*.pem
+*.credentials.json
+
+# Credentials
+credentials/
+system/bots/*/bot.py
+system/bots/*/run.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Node
+node_modules/
+
+# Graphify
+graphify-out/cache/
+system/graphify-out/cache/
+tools/graphify/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.claude/backups/
+
+# Logs
+*.log
+system/bots/*/run.log
+
+# Obsidian
+.obsidian/workspace.json
+.obsidian/graph.json
+
+# Claude
+.claude/sessions/
+.claude/file-history/
+.claude/paste-cache/
+.claude/shell-snapshots/
+.claude/backups/
+
+# Library cache
+library/cache/
+
+# Generated files
+ideas/.processing.lock
+tools/proposal-generator/proposals/*.pdf
+pipeline/research/*.md

@@ -1,0 +1,141 @@
+campaign: impkt-migration
+started: 2026-04-12
+current_phase: FASE_1_INVENTARIO
+
+phases:
+  FASE_1_INVENTARIO:
+    status: completed
+    completed_date: 2026-04-13T02:45:00Z
+    output:
+      - library/inventory-claude-code.md
+      - library/inventory-antigravity.md
+      - library/inventory-workspace.md
+      - library/inventory-pendientes-openclaw.md
+
+  FASE_2_FEATURES:
+    status: completed
+    completed_date: 2026-04-13T03:00:00Z
+    output:
+      - library/features-finn-production.md
+      - library/features-mila-marketing.md
+      - library/features-lena-outreach.md
+      - library/features-sofia-sales.md
+      - library/features-nova-client-comms.md
+      - library/features-global.md
+
+  FASE_3_INSTALACION:
+    status: completed
+    completed_date: 2026-04-13T08:30:00Z
+    output:
+      - library/plugins-installed.md
+      - library/skills-installed.md
+      - library/mcps-installed.md
+      - .gitignore
+    installed:
+      plugins: [frontend-design, code-review, commit-commands, hookify, plugin-dev, pr-review-toolkit, feature-dev, security-guidance, agent-sdk-dev]
+      skills: [graphify, landing-builder, proposal-generator, coding-agent, lead-research, content-humanizer, seo-optimizer, client-onboarding]
+      mcps: [filesystem, fetch, git]
+    notes:
+      - "9 plugins instalados (ralph-wiggum no disponible)"
+      - "8 skills instaladas (4 de OpenClaw, 4 stubs nuevos)"
+      - "3 MCPs configurados en .claude/mcp.json"
+      - ".gitignore completo creado"
+
+  FASE_5_CUSTOM_TOOLS:
+    status: completed
+    completed_date: 2026-04-13T10:00:00Z
+    output:
+      - tools/proposal-generator/generate_proposal.py
+      - tools/proposal-generator/README.md
+      - tools/lead-research/research.py
+      - tools/lead-research/README.md
+      - tools/humanizer/humanize.py
+      - tools/humanizer/README.md
+      - tools/pipeline-manager/pipeline.py
+      - tools/pipeline-manager/README.md
+    notes:
+      - "4 tools creadas y probadas"
+      - "proposal-generator: genera PDF 4 paginas con fpdf2 — TESTED"
+      - "lead-research: fetchea URL y genera brief con score — TESTED"
+      - "humanizer: elimina frases genericas de IA — TESTED"
+      - "pipeline-manager: CRUD de leads en 6 etapas — TESTED"
+
+  FASE_6_IDEAS_REPO:
+    status: completed
+    completed_date: 2026-04-13T10:05:00Z
+    output:
+      - ideas/RULES.md
+      - ideas/index.md
+    notes:
+      - "ideas/RULES.md creado — reglas del repositorio"
+      - "ideas/index.md creado por update_index"
+      - "process-ideas.py ya estaba completo"
+      - "bot @impkt_ideas_bot operativo y verificado"
+
+  FASE_7_INTEGRACION:
+    output:
+      - ideas/RULES.md
+      - ideas/process-ideas.py (mejora)
+      - ideas/inbox/
+      - ideas/approved/
+      - ideas/implemented/
+      - ideas/discarded/
+
+  FASE_7_INTEGRACION:
+    status: pending
+    output:
+      - library/LIBRARY.md
+      - library/needs-gabriel.md
+      - CLAUDE.md (actualizar)
+      - graphify rebuild
+      - git commit
+
+  FASE_1_FUNDACIONES:
+    status: completed
+    completed_date: 2026-04-12T11:30:00Z
+
+  FASE_2_COMUNICACION:
+    status: completed
+    completed_date: 2026-04-13T00:45:00Z
+    note: "3 instancias Telegram independientes — comunicación directa sin intermediarios"
+    bots:
+      director:
+        name: "@impkt_director_bot"
+        token: "8610839715:AAG2G_Vww2oTDaUIMPxcRjpZFz3OZZ69p8g"
+        es: "YO (IMPKT Director) — conversación directa conmigo"
+        tipo: "Claude Code session"
+        comandos: ["/status", "/pipeline", "/memory", "/festival", "/alerts", "/hola"]
+        estado: "operativo"
+
+      reporter:
+        name: "@impkt_reporter_bot"
+        token: "8770963569:AAHSYelKhVmqvNsT8GImt-5X4CQ1i3oY-po"
+        es: "Reporter independiente — genera sus propios reportes"
+        tipo: "Script independiente + Telegram handler"
+        comandos: ["/report", "/weekly", "/daily", "/subscribe", "/lead", "/metrics"]
+        estado: "operativo"
+
+      ideas:
+        name: "@impkt_ideas_bot"
+        token: "8770191324:AAE0zSo4iCr6MIXP2e-MfOEihTNqxKlVT4Y"
+        es: "Repositorio de Ideas — procesamiento directo"
+        tipo: "Script independiente + Telegram handler"
+        comandos: ["/idea", "/status", "/approved", "/implemented", "/discard", "/approve"]
+        estado: "operativo"
+
+    principio: "Cada bot ES su sección. No hay clones, no hay intermediarios. Comunicación DIRECTA."
+
+  FASE_3_DIRECTOR:
+    status: completed
+
+  FASE_4_LEADS:
+    status: pending
+
+  FASE_5_IDEAS:
+    status: pending
+
+  FASE_6_TESTING:
+    status: pending
+
+next_task: "FASE_6_IDEAS_REPO — crear ideas/RULES.md y mejorar process-ideas.py"
+last_updated: 2026-04-13T10:00:00Z
