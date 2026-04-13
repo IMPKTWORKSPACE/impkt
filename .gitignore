@@ -40,12 +40,19 @@ system/bots/*/run.log
 .obsidian/workspace.json
 .obsidian/graph.json
 
-# Claude
+# Claude (global internal - no commit)
 .claude/sessions/
 .claude/file-history/
 .claude/paste-cache/
 .claude/shell-snapshots/
 .claude/backups/
+.claude/known_marketplaces.json
+.claude/telemetry/
+.claude/ide/
+.claude/plans/
+.claude/tasks/
+.claude/history.jsonl
+.claude/credentials.json
 
 # Library cache
 library/cache/

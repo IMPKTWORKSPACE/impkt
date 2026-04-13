@@ -1,7 +1,7 @@
 # Graph Report - .  (2026-04-13)
 
 ## Corpus Check
-- 9 files · ~51,051 words
+- 9 files · ~52,072 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -538,6 +538,8 @@
 10. `handle_message()` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `cmd_leads()` --calls--> `is_allowed()`  [EXTRACTED]
+  system\bots\director\bot.py → system\bots\reporter\bot.py
 - `cmd_pipeline()` --calls--> `is_allowed()`  [EXTRACTED]
   system\bots\director\bot.py → system\bots\reporter\bot.py
 - `cmd_festival()` --calls--> `is_allowed()`  [EXTRACTED]
@@ -546,42 +548,40 @@
   system\bots\director\bot.py → system\bots\reporter\bot.py
 - `cmd_memory()` --calls--> `is_allowed()`  [EXTRACTED]
   system\bots\director\bot.py → system\bots\reporter\bot.py
-- `cmd_leads()` --calls--> `is_allowed()`  [EXTRACTED]
-  system\bots\director\bot.py → system\bots\reporter\bot.py
 
 ## Communities
 
 ### Community 0 - "Community 0"
 Cohesion: 0.18
-Nodes (20): cmd_approve(), cmd_approved(), cmd_discard(), cmd_hola(), cmd_idea(), cmd_implemented(), cmd_leads(), cmd_status() (+12 more)
+Nodes (20): cmd_approve(), cmd_approved(), cmd_discard(), cmd_hola(), cmd_idea(), cmd_implemented(), cmd_status(), cmd_subscribe() (+12 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.15
 Nodes (17): json, evaluate_presence(), extract_contact(), extract_name(), extract_social(), fetch_url(), generate_slug(), identify_opportunities() (+9 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.23
-Nodes (15): archive_lead(), create_lead(), discard_lead(), ensure_dirs(), list_leads(), main(), move_lead(), parse_args() (+7 more)
-
-### Community 3 - "Community 3"
 Cohesion: 0.19
 Nodes (15): create_idea_file(), fetch_url_content(), get_file_content(), log(), parse_frontmatter(), process_inbox(), Main processing loop., Update the ideas index. (+7 more)
 
+### Community 3 - "Community 3"
+Cohesion: 0.23
+Nodes (15): archive_lead(), create_lead(), discard_lead(), ensure_dirs(), list_leads(), main(), move_lead(), parse_args() (+7 more)
+
 ### Community 4 - "Community 4"
-Cohesion: 0.25
-Nodes (13): cmd_daily(), cmd_lead(), cmd_metrics(), cmd_report(), cmd_subscribe(), cmd_weekly(), count_in_dir(), format_daily_report() (+5 more)
+Cohesion: 0.22
+Nodes (13): cmd_alerts(), cmd_festival(), cmd_leads(), cmd_memory(), cmd_pipeline(), error_handler(), get_alerts(), get_daily_summary() (+5 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.24
-Nodes (12): cmd_alerts(), cmd_festival(), cmd_memory(), cmd_pipeline(), error_handler(), get_alerts(), get_daily_summary(), get_festival_summary() (+4 more)
+Cohesion: 0.28
+Nodes (12): cmd_daily(), cmd_lead(), cmd_metrics(), cmd_report(), cmd_weekly(), count_in_dir(), format_daily_report(), format_pipeline() (+4 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.22
-Nodes (8): graphify_analyze, graphify_build, graphify_cluster, graphify_detect, graphify_export, graphify_extract, networkx, os
-
-### Community 7 - "Community 7"
 Cohesion: 0.31
 Nodes (5): FPDF, format_mxn(), generate_proposal(), IMPKTProposal, pathlib
+
+### Community 7 - "Community 7"
+Cohesion: 0.22
+Nodes (8): graphify_analyze, graphify_build, graphify_cluster, graphify_detect, graphify_export, graphify_extract, networkx, os
 
 ### Community 8 - "Community 8"
 Cohesion: 0.67
