@@ -1,3 +1,8 @@
-tools/graphify/
-graphify-out/
+# Graphify tool (in ~/.claude/tools/)
+C:\Users\graci\.claude\tools\graphify\
+
+# Graphify output (in ~/.claude/)
+C:\Users\graci\.claude\graphify-out\
+
+# Git
 .git/

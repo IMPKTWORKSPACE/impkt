@@ -54,11 +54,11 @@ Antes de auditar, planear, o ejecutar cualquier cosa del proyecto, tu PRIMER obj
 
 ### 0.1 — Optimización de tokens
 
-Crea el archivo `system/token-rules.md` con las reglas que seguirás:
+Crea el archivo `C:\Users\graci\.claude\system\token-rules.md` con las reglas que seguirás:
 
 1. NO leas archivos completos si solo necesitas una sección. Usa `head -n`, `tail -n`, `grep`, `Select-String`, `find`.
 2. Agrupa verificaciones en UN solo comando compuesto.
-3. NO repitas comandos ya ejecutados — guarda resultados en archivos temporales en `system/cache/`.
+3. NO repitas comandos ya ejecutados — guarda resultados en archivos temporales en `C:\Users\graci\.claude\system\cache/`.
 4. Archivos > 200 líneas: lee primeras 50 para estructura, luego busca lo específico.
 5. Escribe resultados de trabajo en archivos .md conforme avanzas — no acumules en memoria.
 6. Si una tarea falla, analiza el error ANTES de reintentar.
@@ -66,7 +66,7 @@ Crea el archivo `system/token-rules.md` con las reglas que seguirás:
 
 ### 0.2 — Sistema de estado y continuidad
 
-Crea `system/state.md`. Este archivo es tu salvavidas si la sesión se corta. Actualízalo después de CADA fase completada con:
+Crea `C:\Users\graci\.claude\system\state.md`. Este archivo es tu salvavidas si la sesión se corta. Actualízalo después de CADA fase completada con:
 - Última tarea completada
 - Siguiente tarea pendiente
 - Decisiones tomadas
@@ -85,7 +85,7 @@ wsl -e fest --version 2>/dev/null
 Si está instalado, úsalo directamente. Si NO, replica su estructura:
 
 ```
-system/festival/
+C:\Users\graci\.claude\system\festival/
 ├── campaigns/
 │   └── impkt-migration/
 │       ├── CAMPAIGN_GOAL.md
@@ -110,13 +110,12 @@ Tu loop de trabajo será:
 Configura el sistema de knowledge mapping:
 
 ```
-knowledge/
-├── vault/              # Obsidian vault
-├── graphify/           # Ya clonado en tools/graphify/
-└── index.md            # Índice principal
+C:\Users\oscar\impkt\         # Vault de Obsidian (raíz)
+C:\Users\graci\.claude\tools\graphify\  # Repo de Graphify
+C:\Users\graci\.claude\graphify-out\    # Knowledge graph output
 ```
 
-Graphify (https://github.com/safishamsi/graphify) conecta notas de Obsidian entre sí de manera inteligente. Revisa su README, instala sus dependencias, y configúralo para que mapee todo el knowledge base del proyecto.
+Graphify (https://github.com/safishamsi/graphify) conecta notas de Obsidian entre sí de manera inteligente. La herramienta vive en `~/.claude/tools/graphify/` y el output en `~/.claude/graphify-out/`.
 
 ### 0.5 — Conexión al vault de OpenClaw
 
@@ -376,9 +375,11 @@ _Este archivo es la constitución del sistema IMPKT. Abril 2026._
 
 ## graphify
 
-This project has a graphify knowledge graph at graphify-out/.
+This project has a graphify knowledge graph at `C:\Users\graci\.claude\graphify-out\`.
 
 Rules:
-- Before answering architecture or codebase questions, read graphify-out/GRAPH_REPORT.md for god nodes and community structure
-- If graphify-out/wiki/index.md exists, navigate it instead of reading raw files
-- After modifying code files in this session, run `python3 -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))"` to keep the graph current
+- Before answering architecture or codebase questions, read `C:\Users\graci\.claude\graphify-out\GRAPH_REPORT.md` for god nodes and community structure
+- If `C:\Users\graci\.claude\graphify-out\wiki\index.md` exists, navigate it instead of reading raw files
+- After modifying code files in this session, run from the workspace directory: `python -c "from graphify.watch import _rebuild_code; from pathlib import Path; _rebuild_code(Path('.'))"` to keep the graph current
+
+**Graphify tool location:** `C:\Users\graci\.claude\tools\graphify\`

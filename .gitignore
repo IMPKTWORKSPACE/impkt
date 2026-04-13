@@ -7,8 +7,6 @@
 
 # Credentials
 credentials/
-system/bots/*/bot.py
-system/bots/*/run.log
 
 # Python
 __pycache__/
@@ -19,45 +17,22 @@ __pycache__/
 # Node
 node_modules/
 
-# Graphify
-graphify-out/cache/
-system/graphify-out/cache/
-tools/graphify/
-
 # OS
 .DS_Store
 Thumbs.db
 
-# IDE
-.vscode/settings.json
-.claude/backups/
-
-# Logs
-*.log
-system/bots/*/run.log
-
-# Obsidian
+# Obsidian (vault config - workspace-specific)
 .obsidian/workspace.json
 .obsidian/graph.json
 
-# Claude (global internal - no commit)
-.claude/sessions/
-.claude/file-history/
-.claude/paste-cache/
-.claude/shell-snapshots/
-.claude/backups/
-.claude/known_marketplaces.json
-.claude/telemetry/
-.claude/ide/
-.claude/plans/
-.claude/tasks/
-.claude/history.jsonl
-.claude/credentials.json
+# IDE
+.vscode/settings.json
+
+# Logs
+*.log
 
 # Library cache
 library/cache/
 
-# Generated files
+# Ideas repository
 ideas/.processing.lock
-tools/proposal-generator/proposals/*.pdf
-pipeline/research/*.md
