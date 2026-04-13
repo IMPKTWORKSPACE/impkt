@@ -3,6 +3,23 @@ started: 2026-04-12
 current_phase: FASE_1_INVENTARIO
 
 phases:
+  FASE_0_CLEANUP:
+    status: completed
+    completed_date: 2026-04-13T16:40:00Z
+    output:
+      - library/inventory-global-claude.md
+      - .obsidianignore
+      - .claude/settings.json
+      - .claude/mcp.json
+    notes:
+      - "Basura borrada: .canvas, COMMUNITY, claude code/, support/, .vscode/"
+      - "API keys removidas de audit/infrastructure-map.md"
+      - "skill-creator + mcp-server-dev instalados y habilitados"
+      - "4 stubs vacios -> skills funcionales (lead-research, content-humanizer, seo-optimizer, client-onboarding)"
+      - "wondelai-skills y anthropic-agent-skills NO existen en este sistema"
+      - ".obsidianignore creado para exclucion de folders no-nota"
+      - "47 archivos commitados en github.com/IMPKTWORKSPACE/impkt"
+
   FASE_1_INVENTARIO:
     status: completed
     completed_date: 2026-04-13T02:45:00Z
@@ -143,5 +160,5 @@ phases:
   FASE_6_TESTING:
     status: pending
 
-next_task: "FESTIVAL BIBLIOTECA-IMPKT COMPLETADO — todas las fases terminadas"
-last_updated: 2026-04-13T10:10:00Z
+next_task: "FASE 0 CLEANUP COMPLETA — listo para continuar BIBLIOTECA-IMPKT o nuevo festival"
+last_updated: 2026-04-13T16:40:00Z
